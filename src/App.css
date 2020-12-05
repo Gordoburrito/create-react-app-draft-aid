@@ -1,32 +1,82 @@
-.App {
+.container {padding-left:0;padding-right:5px;}
+.row {margin-left:0;margin-right:-5px;}
+.row > div {padding-left:0;padding-right:5px;}
+
+.scrollable {
+  overflow-y: auto;
+}
+
+.table-condensed > tbody > tr > td {
+  padding: 2px;
+  font-size: 12px;
+}
+
+.aid-title {
   text-align: center;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.position-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html, body {
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#wrap {
+  min-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#main {
+  overflow:auto;
+  padding-bottom:60px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 50px;
+  clear:both;
+  padding:10px;
+}
+
+.overall-rankings {
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.btn-responsive {
+  padding: 4px 8px;
+  font-size: 90%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@media(min-width: 768px){
+  .btn-responsive {
+    font-size: 100%;
+    padding: 5px 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .overall-rankings {
+    height: 710px;
+    margin-bottom: 10px;
+  }
+
+  .draft-history {
+    height: 710px;
+  }
+
+  .table-condensed > tbody > tr > td {
+    padding: 2px;
+    font-size: 13px;
   }
 }
